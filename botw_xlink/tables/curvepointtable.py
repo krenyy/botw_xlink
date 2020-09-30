@@ -32,7 +32,9 @@ class CurvePointTable:
     def read(cls, br: BinaryReader, numCurvePointTable: int):
         inst = cls()
 
-        inst.entries = [CurvePointTableEntry.read(br) for _ in range(numCurvePointTable)]
+        inst.entries = [
+            CurvePointTableEntry.read(br) for _ in range(numCurvePointTable)
+        ]
 
         return inst
 

@@ -89,7 +89,9 @@ class ParamDefineTable:
         string_table_beginning_offset = br.tell()
 
         while inst.size - (br.tell() - offset) > 3:
-            inst.stringTable.append(StringTableEntry.read(br, string_table_beginning_offset))
+            inst.stringTable.append(
+                StringTableEntry.read(br, string_table_beginning_offset)
+            )
 
         br.align_to(4)
 

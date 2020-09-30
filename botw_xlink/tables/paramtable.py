@@ -5,6 +5,7 @@ class ParamTable:
     """
     No idea what to do with this yet
     """
+
     bytes: bytes
 
     @classmethod
